@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="left-section">
+      <div class="front-content">
+        <img src="images/bg-card-front.png" alt="card front image" class="cardFront">
+        <img src="images/card-logo.svg" alt="circles" class="pattern">
+        <div class="cardNum">
+          0000 0000 0000 0000
+        </div>
+        <div class="join-left">
+          <div class="cardHolder">
+            Jane Appleseed
+          </div>
+          <div class="cardDate">
+            00/00
+          </div>
+        </div>
+      </div>
+
+      <div class="back-content">
+        <img src="images/bg-card-back.png" alt="card back image" class="cardBack">
+        <div class="cvc">000</div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <form class="form" name="form" id="page1">
+        <label><span class="name">CARDHOLDER NAME</span>
+          <input type="text" placeholder="e.g. Jane Appleseed" class="hoder-name" id="name">
+          <p id="alpha" class="message"></p>
+        </label>
+
+        <label><span class="number">CARD NUMBER</span>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="card-num" id="card-num">
+          <p id="onlynum" class="message"></p>
+        </label>
+
+        <div class="right-join">
+          <div class="date-content">
+            <label class="month-year">
+              <span class="date">EXP. DATE (MM/YY)</span>
+              <input type="text" placeholder="MM" class="dmy" id="month">
+              <input type="text" placeholder="YY" class="dmy" id="year">
+              <p id="my" class="message"></p>
+            </label>
+          </div>
+          <div class="cvc-content">
+            <label><span class="cvcNum">CVC</span>
+              <input type="text" placeholder="e.g. 123" class="cvc-num" id="cvcnum">
+              <p id="cvc-Num" class="message"></p>
+            </label>
+          </div>
+        </div>
+
+        <button type="button" id="btn">Confirm</button>
+      </form>
+
+      <div class="completed-content display" id="page2">
+        <img src="images/icon-complete.svg" alt="correct image" class="tick-img">
+        <p class="thanks">THANK YOU!</p>
+        <p class="confirm">We've added your card details</p>
+        <button id="again">Continue</button>
+      </div>
+
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Matin Imam</a>.
+    </div>
+
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

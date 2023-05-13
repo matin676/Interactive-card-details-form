@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  transition: all 0.4s ease;
+}
+
+.container {
+  display: flex;
+}
+
+.left-section {
+  background-image: url("images/bg-main-desktop.png");
+  color: hsl(0, 0%, 100%);
+  min-height: 100vh;
+  z-index: -999;
+}
+
+.front-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardFront,
+.cardBack {
+  position: relative;
+  z-index: -1;
+  width: 375px;
+  height: 200px;
+  box-shadow: 6px 10px 60px -40px rgba(0, 0, 0, 0.75);
+}
+
+.cardFront {
+  top: 8rem;
+  left: 8rem;
+}
+
+.pattern,
+.cardNum,
+.join-left {
+  position: relative;
+}
+
+.pattern {
+  width: 18%;
+  height: 18%;
+  left: 9.5rem;
+  top: -3.5rem;
+}
+
+.cardNum {
+  left: 10rem;
+  font-size: 1.8rem;
+}
+
+.join-left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  top: 1rem;
+  left: 6.5rem;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.cardDate {
+  position: relative;
+  left: 3rem;
+}
+
+.cardBack {
+  top: 25rem;
+  left: 12rem;
+}
+
+.cvc {
+  position: relative;
+  top: 17.8rem;
+  left: 31rem;
+  font-size: 13px;
+}
+
+.right-section {
+  min-height: 100vh;
+  margin-left: 20rem;
+}
+
+form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+}
+
+input {
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+  border: 0.5px solid hsla(0, 1%, 44%, 0.348);
+  border-radius: 9px;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+input:focus {
+  border: 1.5px solid hsl(279, 52%, 40%);
+}
+
+.right-join {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.dmy {
+  width: 5rem;
+  margin: auto;
+}
+
+span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.8;
+  padding-bottom: 0.5rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+.cvcNum {
+  margin-left: 1rem;
+}
+
+.cvc-num {
+  width: 9rem;
+  margin-left: 1rem;
+}
+
+button {
+  width: 20rem;
+  height: 2.5rem;
+  color: white;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 9px;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.message {
+  color: red;
+  font-size: 11px;
+  margin-top: -0.8rem;
+}
+
+#my {
+  margin-top: 0.2rem;
+}
+
+#cvc-Num {
+  margin-left: 1rem;
+}
+
+.completed-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.tick-img {
+  width: 65px;
+  margin-bottom: 1.5rem;
+}
+
+.thanks {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.confirm {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.display {
+  display: none;
+}
+
+.attribution {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1035px) {
+  .cardFront {
+    left: 5rem;
+  }
+  .cardBack {
+    left: 8rem;
+  }
+  .pattern {
+    left: 6.5rem;
+  }
+  .cardNum {
+    left: 7rem;
+  }
+  .join-left {
+    left: 4rem;
+  }
+  .cardDate {
+    left: 2rem;
+  }
+  .cvc {
+    left: 27rem;
+  }
+  .right-section {
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .cardFront,
+  .cardBack {
+    width: 300px;
+    height: 175px;
+  }
+  .pattern {
+    top: -2rem;
+  }
+  .cardNum {
+    left: 6rem;
+    font-size: 1.5rem;
+  }
+  .cvc {
+    left: 23rem;
+    top: 18.5rem;
+  }
+  .right-section {
+    margin-left: 10rem;
+  }
+  input {
+    width: 15rem;
+    font-size: 0.8rem;
+  }
+  .dmy {
+    width: 4rem;
+  }
+  .cvc-num {
+    width: 5rem;
+  }
+  button {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-section {
+    background-image: url("images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 50vh;
+  }
+  .cardFront,
+  .cardBack {
+    width: 275px;
+  }
+  .cardFront {
+    left: 2rem;
+    top: 10rem;
+    z-index: -1;
+  }
+  .cardBack {
+    left: 4rem;
+    top: 3rem;
+    z-index: -999;
+  }
+  .pattern{
+    top: -0.3rem;
+    left: 3rem;
+  }
+  .cardNum{
+    top: 2rem;
+    left: 3rem;
+    font-size: 1.2rem;
+  }
+  .join-left{
+    top: 3rem;
+    left: 1rem;
+    justify-content: space-evenly;
+  }
+  .cvc{
+    top: -3.5rem;
+    left: 17.5rem;
+  }
+  .right-section{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    min-height: 50vh;
+  }
+  form, .completed-content{
+    position: relative;
+    top: 10rem;
+  }
+  input {
+    width: 20rem;
+  }
+  .dmy {
+    width: 5rem;
+  }
+  .cvc-num {
+    width: 9rem;
+  }
+  button {
+    width: 20rem;
+  }
+}
